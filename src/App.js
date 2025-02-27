@@ -7,11 +7,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
         <WeatherApp />
-        <button type="button" class="btn btn-primary">
-          testing blue button
-        </button>
+
         <footer>
           This project was coded by
           <a
@@ -20,9 +17,9 @@ export default function App() {
             rel="noreferrer"
           >
             {" "}
-            Christine Del Rosario{" "}
+            Christine Del Rosario,
           </a>{" "}
-          and is{" "}
+          is{" "}
           <a
             href="https://github.com/cdelro28/react-weather-app"
             target="_blank"
@@ -37,7 +34,7 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            hosted on Netlify
+            hosted on Netlify.
           </a>
         </footer>
       </div>

@@ -1,0 +1,21 @@
+.App {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+.App footer a {
+  background-image: linear-gradient(
+    to right,
+    rgb(242, 112, 156),
+    rgb(255, 148, 114)
+  );
+  background-clip: text;
+  color: transparent;
+  padding-top: 0px;
+}
+
+.App footer {
+  text-align: center;
+  font-size: 14px;
+}
