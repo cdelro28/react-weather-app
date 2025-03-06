@@ -11,7 +11,7 @@ export default function WeatherApp(props) {
   function handleResponse(response) {
     setWeatherData({
       temperature: response.data.temperature.current,
-      icon: response.data.condition.icon_url,
+      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       city: response.data.city,
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
