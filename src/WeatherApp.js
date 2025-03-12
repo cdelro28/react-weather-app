@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./WeatherApp.css";
-
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherApp(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -11,12 +11,13 @@ export default function WeatherApp(props) {
   function handleResponse(response) {
     setWeatherData({
       temperature: response.data.temperature.current,
-      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+      iconUrl: response.data.condition.icon_url,
       city: response.data.city,
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       date: new Date(response.data.time * 1000),
+      coordinates: response.data.coordinates,
     });
     setReady(true);
   }
@@ -60,6 +61,7 @@ export default function WeatherApp(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast cityForecast={weatherData} />
       </div>
     );
   } else {
