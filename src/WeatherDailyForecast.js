@@ -3,17 +3,18 @@ import React from "react";
 export default function WeatherDailyForecast(props) {
   function maxTemp() {
     let temperature = Math.round(props.dailyData.temperature.maximum);
-    return `${temperature}°`;
+    return `${temperature}°C`;
   }
   function minTemp() {
     let temperature = Math.round(props.dailyData.temperature.minimum);
-    return `${temperature}°`;
+    return `${temperature}°C`;
   }
 
   function day() {
-    let date = new Date(props.dailyData.time * 1000);
-    let day = date.getDate();
-    return day;
+    const date = new Date(props.dailyData.time * 1000);
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const weekDay = daysOfWeek[date.getDay()];
+    return weekDay;
   }
 
   return (
