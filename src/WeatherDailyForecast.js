@@ -17,7 +17,7 @@ export default function WeatherDailyForecast(props) {
   }
 
   return (
-    <ul>
+    <ul className="dailyForecast">
       <li>{day()}</li>
       <li>
         <img

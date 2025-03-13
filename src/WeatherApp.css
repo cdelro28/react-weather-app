@@ -8,6 +8,7 @@ body {
   background-color: #272142;
   color: #fff;
   border-radius: 40px;
+  box-shadow: 10px 5px 5px #41326414;
 }
 
 .WeatherApp h1 {
@@ -76,4 +77,11 @@ body {
 .WeatherForecast .col {
   text-align: center;
   padding-top: 40px;
+}
+
+.dailyForecast img {
+  height: 72px;
+  width: 72px;
+  display: block;
+  margin: 0 auto;
 }
