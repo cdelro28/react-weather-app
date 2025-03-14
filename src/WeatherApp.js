@@ -48,13 +48,13 @@ export default function WeatherApp(props) {
               <input
                 type="Search"
                 placeholder="Enter a city..."
-                className="form-control"
+                className="form-control border-0"
                 autoFocus="on"
                 onChange={handleCityChange}
               />
             </div>
             <div className="col-3">
-              <button type="submit" className="btn w-100">
+              <button type="submit" className="border-0">
                 Search
               </button>
             </div>

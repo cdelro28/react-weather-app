@@ -57,7 +57,7 @@ body {
   margin-right: 20px;
 }
 
-.temperature {
+.temperature-main {
   font-weight: 400;
   font-size: 92px;
   line-height: 92px;
@@ -69,19 +69,71 @@ body {
   margin-left: 10px;
 }
 
-.unit a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.3);
-}
-
 .WeatherForecast .col {
   text-align: center;
   padding-top: 40px;
 }
 
-.dailyForecast img {
+.data-forecast img {
   height: 72px;
   width: 72px;
   display: block;
   margin: 0 auto;
+}
+
+.min-temp {
+  opacity: 0.3;
+}
+
+@media (max-width: 1000px) {
+  .WeatherApp {
+    margin: 10px;
+    padding: 15px 20px;
+  }
+
+  .WeatherApp h1 {
+    font-size: 32px;
+  }
+
+  .WeatherApp form {
+    padding: 10px;
+  }
+
+  .WeatherApp button {
+    padding: 10px 15px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .temperature-main {
+    font-size: 64px;
+  }
+
+  .unit {
+    position: relative;
+    top: -32px;
+    margin-left: 5px;
+  }
+
+  .WeatherForecast .day-data {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .WeatherForecast .img-forecast {
+    height: 64px;
+    width: 64px;
+  }
+
+  .data-forecast li {
+    font-size: 14px;
+  }
+
+  .WeatherInfo li {
+    font-size: 14px;
+  }
 }
